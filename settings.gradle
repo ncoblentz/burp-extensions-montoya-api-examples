@@ -1,4 +1,9 @@
+plugins {
+    id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
+}
+
 include 'helloworld'
+include 'helloworldKotlin'
 include 'eventlisteners'
 include 'httphandler'
 include 'multiapi'
@@ -18,4 +23,3 @@ include 'proxywebsockethandler'
 include 'websockethandler'
 include 'contextmenu'
 include 'collaborator'
-
