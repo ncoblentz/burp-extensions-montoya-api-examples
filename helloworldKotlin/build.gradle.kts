@@ -1,0 +1,22 @@
+plugins {
+    id("java")
+    kotlin("jvm") version "2.0.0"
+    id("com.github.johnrengelman.shadow") version "8.1.1" //use Gradle task: shadow -> shadowJar or just gradlew shadowJar
+
+}
+
+group = "net.portswigger.burp.extensions.example"
+version = "1.0.0"
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation("net.portswigger.burp.extensions:montoya-api:2023.12.1")
+}
+
+kotlin {
+    jvmToolchain(21)
+}
