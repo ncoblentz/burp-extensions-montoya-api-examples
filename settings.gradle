@@ -4,11 +4,22 @@ plugins {
 
 include 'helloworld'
 include 'helloworldKotlin'
+
 include 'eventlisteners'
+include 'eventlistenersKotlin'
+
 include 'httphandler'
+include 'httphandlerKotlin'
+
 include 'multiapi'
+include 'multiapiKotlin'
+
 include 'proxyhandler'
+include 'proxyhandlerKotlin'
+
 include 'trafficredirector'
+include 'trafficredirectorKotlin'
+
 include 'customrequesteditortab'
 include 'customscaninsertionpoints'
 include 'customscannerchecks'
@@ -18,7 +29,6 @@ include 'intruderpayloads'
 include 'customlogger'
 include 'persistence'
 include 'menubar'
-
 include 'proxywebsockethandler'
 include 'websockethandler'
 include 'contextmenu'

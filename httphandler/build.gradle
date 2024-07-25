@@ -1,9 +1,12 @@
 plugins {
-    id 'java'
+    id("java")
+    kotlin("jvm") version "2.0.0"
+    id("com.github.johnrengelman.shadow") version "8.1.1" //use Gradle task: shadow -> shadowJar or just gradlew shadowJar
+
 }
 
-group 'net.portswigger.burp.extensions.example'
-version '1.0.0'
+group = "net.portswigger.burp.extensions.example"
+version = "1.0.0"
 
 repositories {
     mavenLocal()
@@ -11,11 +14,10 @@ repositories {
 }
 
 dependencies {
-    compileOnly 'net.portswigger.burp.extensions:montoya-api:2023.1'
+    implementation("net.portswigger.burp.extensions:montoya-api:2023.12.1")
+    implementation(kotlin("stdlib-jdk8"))
 }
 
-jar {
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
+kotlin {
+    jvmToolchain(21)
 }
